@@ -14,6 +14,8 @@
 		B83BD70D1B0ADCBB009A8566 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83BD70C1B0ADCBB009A8566 /* Images.xcassets */; };
 		B83BD7101B0ADCBB009A8566 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B83BD70E1B0ADCBB009A8566 /* LaunchScreen.xib */; };
 		B83BD71C1B0ADCBB009A8566 /* OCEventBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B83BD71B1B0ADCBB009A8566 /* OCEventBusTests.m */; };
+		B83BD7281B0ADCE0009A8566 /* OCEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = B83BD7271B0ADCE0009A8566 /* OCEventBus.m */; };
+		B83BD72C1B0AEEE2009A8566 /* NSObject+eventbus.m in Sources */ = {isa = PBXBuildFile; fileRef = B83BD72B1B0AEEE2009A8566 /* NSObject+eventbus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		B83BD7151B0ADCBB009A8566 /* OCEventBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCEventBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83BD71A1B0ADCBB009A8566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B83BD71B1B0ADCBB009A8566 /* OCEventBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCEventBusTests.m; sourceTree = "<group>"; };
+		B83BD7261B0ADCE0009A8566 /* OCEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCEventBus.h; sourceTree = "<group>"; };
+		B83BD7271B0ADCE0009A8566 /* OCEventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCEventBus.m; sourceTree = "<group>"; };
+		B83BD72A1B0AEEE2009A8566 /* NSObject+eventbus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+eventbus.h"; sourceTree = "<group>"; };
+		B83BD72B1B0AEEE2009A8566 /* NSObject+eventbus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+eventbus.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		B83BD6FE1B0ADCBB009A8566 /* OCEventBus */ = {
 			isa = PBXGroup;
 			children = (
+				B83BD7251B0ADCD1009A8566 /* OCEventBus */,
 				B83BD7031B0ADCBB009A8566 /* AppDelegate.h */,
 				B83BD7041B0ADCBB009A8566 /* AppDelegate.m */,
 				B83BD7061B0ADCBB009A8566 /* ViewController.h */,
@@ -117,6 +124,17 @@
 				B83BD71A1B0ADCBB009A8566 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B83BD7251B0ADCD1009A8566 /* OCEventBus */ = {
+			isa = PBXGroup;
+			children = (
+				B83BD7261B0ADCE0009A8566 /* OCEventBus.h */,
+				B83BD7271B0ADCE0009A8566 /* OCEventBus.m */,
+				B83BD72A1B0AEEE2009A8566 /* NSObject+eventbus.h */,
+				B83BD72B1B0AEEE2009A8566 /* NSObject+eventbus.m */,
+			);
+			path = OCEventBus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +238,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83BD7081B0ADCBB009A8566 /* ViewController.m in Sources */,
+				B83BD7281B0ADCE0009A8566 /* OCEventBus.m in Sources */,
 				B83BD7051B0ADCBB009A8566 /* AppDelegate.m in Sources */,
+				B83BD72C1B0AEEE2009A8566 /* NSObject+eventbus.m in Sources */,
 				B83BD7021B0ADCBB009A8566 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +436,7 @@
 				B83BD7211B0ADCBB009A8566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B83BD7221B0ADCBB009A8566 /* Build configuration list for PBXNativeTarget "OCEventBusTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +445,7 @@
 				B83BD7241B0ADCBB009A8566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
