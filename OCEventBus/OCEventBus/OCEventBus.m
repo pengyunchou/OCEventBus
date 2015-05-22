@@ -138,6 +138,11 @@ static id<OCEventCacheProtocol> cache;
     listenners=[NSMutableDictionary dictionary];
     lisqueue=dispatch_queue_create("ocevnetbus.queue", DISPATCH_QUEUE_SERIAL);
 }
++(void)setCacheProtocol:(id<OCEventCacheProtocol>)cacheprotocol{
+    [self doinqueue:^{
+        cache=cacheprotocol;
+    }];
+}
 +(void)doinqueue:(void(^)())block{
     dispatch_async(lisqueue, block);
 }
