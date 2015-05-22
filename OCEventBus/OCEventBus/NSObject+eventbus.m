@@ -18,4 +18,22 @@
 -(void)unregisterEvent:(uint32_t)event{
     [OCEventBus unregister:event target:self];
 }
+-(void)putMem:(uint32_t)key value:(id)value{
+    [OCEventBus put:key value:value type:OCEventCacheMemory];
+}
+-(void)getMem:(uint32_t)key complete:(oceventbus_cache_cb_t)cb{
+    [OCEventBus get:key type:OCEventCacheMemory cb:cb];
+}
+-(void)putUserDefault:(uint32_t)key value:(id)value{
+    [OCEventBus put:key value:value type:OCEventCacheUserDefault];
+}
+-(void)getUserDefault:(uint32_t)key complete:(oceventbus_cache_cb_t)cb{
+    [OCEventBus get:key type:OCEventCacheUserDefault cb:cb];
+}
+-(void)putFile:(uint32_t)key value:(id)value{
+    [OCEventBus put:key value:value type:OCEventCacheFile];
+}
+-(void)getFile:(uint32_t)key complete:(oceventbus_cache_cb_t)cb{
+    [OCEventBus get:key type:OCEventCacheFile cb:cb];
+}
 @end
